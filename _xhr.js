@@ -9,7 +9,7 @@ window.onload = function(){
 			xhr = new ActiveXObject("Microsoft.XMLHTTP");
 		}
 
-		xhr.open("GET","https://slack.com/api/api.test",true);
+		xhr.open("GET","https://httpbin.org/get",true);
 		//xhr.setRequestHeader('Content-Type', 'application/json');
 		xhr.addEventListener('load',function() {
 			if(xhr.status ===200){
