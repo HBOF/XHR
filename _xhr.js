@@ -12,8 +12,9 @@ window.onload = function(){
 		xhr.open("GET","https://httpbin.org/get",true);
 		//xhr.setRequestHeader('Content-Type', 'application/json');
 		xhr.addEventListener('load',function() {
+			var buf = this.responseText;
 			if(xhr.status ===200){
-				document.write("We got data! <br/><br/>" + xhr.responseText);
+				document.write("We got data! <br/><br/>" + buf);
 			}
 			else{
 				document.write("Error loading page\n");
