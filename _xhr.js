@@ -10,7 +10,7 @@ window.onload = function(){
 		}
 
 		xhr.open("GET","https://slack.com/api/api.test",true);
-		xhr.setRequestHeader('Content-Type', 'application/json');
+		//xhr.setRequestHeader('Content-Type', 'application/json');
 		xhr.addEventListener('load',function() {
 			if(xhr.status ===200){
 				document.write("We got data! <br/><br/>" + xhr.responseText);
@@ -20,7 +20,7 @@ window.onload = function(){
 			}
 		},false)
 
-		xhr.overrideMimeType('text/json');
+		//xhr.overrideMimeType('text/json');
 		xhr.send();	
 	})	
 }
